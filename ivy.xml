@@ -1,0 +1,7 @@
+<ivy-module version="2.0">
+    <info organisation="apache" module="hello−ivy"/>
+    <dependencies>
+        <dependency org="com.opencsv" name="opencsv" rev="3.9">
+        <artifact name="opencsv" type="jar" /> </dependency>
+    </dependencies>
+</ivy-module>

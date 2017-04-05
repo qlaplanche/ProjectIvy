@@ -76,7 +76,7 @@
           target: go
                     Go ivy, go!
          ================================= -->
-    <target name="go" depends="install-ivy, generate-src" 
+    <target name="go" depends="install-ivy, resolve, generate-src" 
             description="--> resolve dependencies, compile">
 		<echo message="using ivy to resolve commons-lang 2.1..."/>
         <!-- here comes the magic line: asks ivy to resolve a dependency on 
@@ -102,6 +102,11 @@ We are now ready to execute our simple program with its dependency on commons-la
                 <path location="${build.dir}" />
             </classpath>
         </java>
+    </target>
+
+    <target name="resolve" description="retrieve dependencies with ivy">
+        <ivy:resolve />
+        <ivy:cachepath pathid="lib.path.id"/>
     </target>
 
 	<!-- ================================= 
