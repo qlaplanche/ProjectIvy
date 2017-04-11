@@ -1,10 +1,10 @@
 <ivy-module version="2.0">
-    <info organisation="apache" module="hello−ivy"/>
+    <info organisation="apache" module="info−all" branch="trunk" revision="1.0" status="release" />
     <dependencies>
         <dependency org="com.opencsv" name="opencsv" rev="3.9">
             <artifact name="opencsv" type="jar" /> 
         </dependency>
-        
+
          <dependency org="commons-lang" name="commons-lang" rev="2.1"/>
     </dependencies>
 </ivy-module>

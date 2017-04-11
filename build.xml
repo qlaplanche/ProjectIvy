@@ -94,6 +94,12 @@ We are now ready to execute our simple program with its dependency on commons-la
 		</echo>
        
     </target>
+
+    <target name="report" depends="go" description="--> Generate project's report'">
+        <mkdir dir="report"/>
+        <ivy:report todir="report" />
+    </target>
+
     <target name="run" depends="go" description="--> run the project">
         <java classname="example.Hello">
             <classpath>
